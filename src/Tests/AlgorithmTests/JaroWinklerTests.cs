@@ -5,8 +5,14 @@ namespace AlgorithmTests;
 public class JaroWinklerTests
 {
     [Fact]
-    public void IdenticalWords_ShouldReturn1()
+    public void IdenticalStrings_ShouldReturn1()
     {
         Assert.Equal(1, JaroWinkler.JaroWinklerResult("hello", "hello"));
+    }
+
+    [Fact]
+    public void CompletelyDifferentStrings_ShouldReturn0()
+    {
+        Assert.Equal(0, JaroWinkler.JaroWinklerResult("abc", "zyx"));
     }
 }
