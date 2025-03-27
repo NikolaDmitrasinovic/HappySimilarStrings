@@ -15,4 +15,11 @@ public class JaroWinklerTests
     {
         Assert.Equal(0, JaroWinkler.JaroWinklerResult("abc", "zyx"));
     }
+
+    [Fact]
+    public void CloseMatch_ShouldReturnHighScore()
+    {
+        var score = JaroWinkler.JaroWinklerResult("helo", "hello");
+        Assert.InRange(score, 0.95, 1.0);
+    }
 }
