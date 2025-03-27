@@ -22,4 +22,11 @@ public class JaroWinklerTests
         var score = JaroWinkler.JaroWinklerResult("helo", "hello");
         Assert.InRange(score, 0.95, 1.0);
     }
+
+    [Fact]
+    public void TransposedLetters_ShouldHaveLowerScore()
+    {
+        var score = JaroWinkler.JaroWinklerResult("hleol", "hello");
+        Assert.InRange(score, 0.8, 0.9);
+    }
 }
