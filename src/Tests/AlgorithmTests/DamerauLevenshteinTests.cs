@@ -11,7 +11,7 @@ public class DamerauLevenshteinTests
     }
 
     [Fact]
-    public void SingleCharacterChange_ShouldReturnOne()
+    public void SingleCharacterChange_ShouldReturn1()
     {
         Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinResult("hello", "hallo"));
     }
