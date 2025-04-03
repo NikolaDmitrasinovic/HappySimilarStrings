@@ -2,8 +2,10 @@
 
 public class DamerauLevenshtein
 {
-    public static int DamerauLevenshteinResult(string v1, string v2)
+    public static int DamerauLevenshteinResult(string s1, string s2)
     {
-        return 0;
+        if (s1 == s2) return 0;
+
+        return 1;
     }
 }
