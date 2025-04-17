@@ -4,7 +4,7 @@ public static class JaroWinkler
 {
     public static double JaroWinklerResult(string s1, string s2)
     {
-        if(s1 == s2) return 1;
+        if (s1 == s2) return 1;
 
         var matchDistance = Math.Max(s1.Length, s2.Length);
         var s1Matches = new bool[s1.Length];
