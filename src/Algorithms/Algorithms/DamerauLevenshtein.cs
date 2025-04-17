@@ -2,6 +2,8 @@
 
 public class DamerauLevenshtein
 {
+    /// Calculates Damerau-Levenshtein distance using the restricted (Optimal String Alignment) version.
+    /// Supports adjacent transpositions only.
     public static int DamerauLevenshteinRestrictedResult(string s1, string s2)
     {
         var len1 = s1.Length;
