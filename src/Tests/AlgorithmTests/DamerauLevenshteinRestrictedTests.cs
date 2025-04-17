@@ -2,36 +2,36 @@
 
 namespace AlgorithmTests;
 
-public class DamerauLevenshteinTests
+public class DamerauLevenshteinRestrictedTests
 {
     [Fact]
     public void IdenticalWords_ShouldReturn0()
     {
-        Assert.Equal(0, DamerauLevenshtein.DamerauLevenshteinResult("hello", "hello"));
+        Assert.Equal(0, DamerauLevenshtein.DamerauLevenshteinRestrictedResult("hello", "hello"));
     }
 
     [Fact]
     public void SingleCharacterChange_ShouldReturn1()
     {
-        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinResult("hello", "hallo"));
+        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinRestrictedResult("hello", "hallo"));
     }
 
     [Fact]
     public void OneInsertion_ShouldReturn1()
     {
-        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinResult("car", "char"));
+        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinRestrictedResult("car", "char"));
     }
 
     [Fact]
     public void OneDeletion_ShouldReturn1()
     {
-        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinResult("char", "car"));
+        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinRestrictedResult("char", "car"));
     }
 
     [Fact]
     public void OneTransposition_ShouldReturn1()
     {
-        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinResult("hlelo", "hello"));
+        Assert.Equal(1, DamerauLevenshtein.DamerauLevenshteinRestrictedResult("hlelo", "hello"));
     }
 
     [Theory]
@@ -40,6 +40,6 @@ public class DamerauLevenshteinTests
     [InlineData("abcd", "efgh", 4)]
     public void MultipleEdits_ShouldReturnCorrectDistance(string s1, string s2, int distance)
     {
-        Assert.Equal(distance, DamerauLevenshtein.DamerauLevenshteinResult(s1, s2));
+        Assert.Equal(distance, DamerauLevenshtein.DamerauLevenshteinRestrictedResult(s1, s2));
     }
 }

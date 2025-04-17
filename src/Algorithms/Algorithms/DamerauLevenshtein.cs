@@ -2,7 +2,7 @@
 
 public class DamerauLevenshtein
 {
-    public static int DamerauLevenshteinResult(string s1, string s2)
+    public static int DamerauLevenshteinRestrictedResult(string s1, string s2)
     {
         var len1 = s1.Length;
         var len2 = s2.Length;
